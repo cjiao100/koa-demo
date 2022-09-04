@@ -1,10 +1,13 @@
-import Router from '@koa/router';
-import Joi from 'joi';
-import _ from 'lodash';
+import * as Router from '@koa/router';
+import * as Joi from 'joi';
+import * as _ from 'lodash';
 import { ValidationError } from "../common/error";
+import demoRouter from "./demo";
 
 const router = new Router();
-const CustomRouterModules = [];
+const CustomRouterModules = [
+    demoRouter
+];
 
 const routerSchema = Joi.object({
     apiInfo: Joi.object({
@@ -45,6 +48,8 @@ class CustomRouter {
             }
 
             ctx.validation = _.merge({}, value.query, value.body, value.params);
+
+            await next()
         }
     }
 

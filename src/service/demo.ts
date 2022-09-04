@@ -1,5 +1,5 @@
 const check = async (ctx, next) => {
-    ctx.resSucess('ok');
+    ctx.resSuccess('ok');
 
     await next();
 }

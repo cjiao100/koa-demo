@@ -1,8 +1,8 @@
 import Koa from 'koa';
-import conditional from 'koa-conditional-get';
-import etag from 'koa-etag';
-import bodyParse from 'koa-bodyparser';
-import koaHelmet from "koa-helmet";
+import * as conditional from 'koa-conditional-get';
+import * as etag from 'koa-etag';
+import * as bodyParse from 'koa-bodyparser';
+import * as koaHelmet from "koa-helmet";
 
 import routes from './routes';
 import { contextHandler, errorHandler } from './middleware';

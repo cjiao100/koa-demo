@@ -14,7 +14,7 @@ export default async (ctx, next) => {
        ctx.status = status;
    }
 
-   ctx.resSucess = (data = null) => {
+   ctx.resSuccess = (data = null) => {
        ctx.body = {
            errno: HTTP_ERROR_CODE.SUCCESS,
            errmsg: '',

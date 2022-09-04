@@ -1,0 +1,21 @@
+{
+  "strict": true,
+  "compilerOptions": {
+    "sourceMap": true,
+    "listFiles": false,
+    "module": "CommonJS",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "types": ["node", "jest"],
+    "target": "ES2020",
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "newLine": "lf"
+  },
+  "include": ["src"],
+  "exclude": ["dist"]
+}
